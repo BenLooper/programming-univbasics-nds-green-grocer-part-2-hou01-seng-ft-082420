@@ -5,10 +5,10 @@ def apply_coupons(cart, coupons)
   cart.each do |grocery_item|
     coupons.each do |coupon|
       if coupon[:item] == grocery_item[:item]
-        cart.append {:item => grocery_item[:item] + " W/COUPON", 
-                     :price => coupon[:cost] / coupon[:num],
-                     :clearance => true,
-                     :count => coupon[:num]
+        cart.append {item: grocery_item[:item] + " W/COUPON", 
+                     price: coupon[:cost] / coupon[:num],
+                     clearance: true,
+                     count: coupon[:num]
                     }
       end 
     end 
