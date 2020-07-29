@@ -15,11 +15,11 @@ def apply_coupons(cart, coupons)
     end 
   end 
   cart.each do |grocery_item|
+    binding.pry
     if grocery_item[:count] == 0 
       grocery_item = nil
     end 
   end 
-  binding.pry
 end
 
 def apply_clearance(cart)
