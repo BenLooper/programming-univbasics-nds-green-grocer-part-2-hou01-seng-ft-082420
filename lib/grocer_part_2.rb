@@ -10,10 +10,11 @@ def apply_coupons(cart, coupons)
                      clearance: true,
                      count: coupon[:num]
                     })
+        grocery_item[:count] = grocery_item[:count] - coupon[:num] 
       end 
     end 
   end 
-  binding.pry 
+ binding.pry
   
   
 end
