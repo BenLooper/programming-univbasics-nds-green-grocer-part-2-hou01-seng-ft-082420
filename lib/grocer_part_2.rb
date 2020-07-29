@@ -6,8 +6,14 @@ def apply_coupons(cart, coupons)
     coupons.each do |coupon|
       if coupon[:item] == grocery_item[:item]
         cart.append {:item => grocery_item[:item] + " W/COUPON", 
-                     :price => coupon[:cost] / 
-        
+                     :price => coupon[:cost] / coupon[:num],
+                     :clearance => true,
+                     :count => coupon[:num]
+                    }
+      end 
+    end 
+  end 
+  binding.pry 
   
   
 end
