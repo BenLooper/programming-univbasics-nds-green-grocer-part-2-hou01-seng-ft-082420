@@ -18,9 +18,9 @@ def apply_coupons(cart, coupons)
     if grocery_item[:count] == 0 
       index = cart.find_index(grocery_item)
       cart.pop index 
-    end 
+    end
+    binding.pry
   end 
-  binding.pry
 end
 
 def apply_clearance(cart)
