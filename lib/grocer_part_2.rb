@@ -8,7 +8,7 @@ def apply_coupons(cart, coupons)
         until grocery_item[:count] < coupon[:num]
           cart.append({item: grocery_item[:item] + " W/COUPON", 
                        price: coupon[:cost] / coupon[:num],
-                       clearance: true,
+                       clearance: grocery_item[:clearance],
                        count: coupon[:num]
                       })
           grocery_item[:count] = grocery_item[:count] - coupon[:num]
