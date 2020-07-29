@@ -4,6 +4,7 @@ require 'pry'
 def apply_coupons(cart, coupons)
   binding.pry
   
+  
 end
 
 def apply_clearance(cart)
