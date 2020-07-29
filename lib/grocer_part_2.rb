@@ -17,7 +17,7 @@ def apply_coupons(cart, coupons)
   cart.each do |grocery_item|
     if grocery_item[:count] < 1
       index = grocery_item.find_index
-      cart.pop index
+      grocery_item = nil
     end 
   end 
 end
