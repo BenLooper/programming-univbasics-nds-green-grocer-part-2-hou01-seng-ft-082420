@@ -15,8 +15,11 @@ def apply_coupons(cart, coupons)
     end 
   end 
   cart.each do |grocery_item|
-    if grocery_item[:count] < 1 
-  
+    if grocery_item[:count] < 1
+      cart.pop grocery_item
+    end 
+  end 
+  binding.pry
   
 end
 
