@@ -19,7 +19,6 @@ def apply_coupons(cart, coupons)
       index = cart.find_index(grocery_item)
       cart.slice! index 
     end
-    binding.pry
   end 
 end
 
