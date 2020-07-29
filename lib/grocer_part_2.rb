@@ -16,8 +16,9 @@ def apply_coupons(cart, coupons)
   end 
   cart.each do |grocery_item|
     if grocery_item[:count] == 0 
-      index = cart.find_index
-      grocery_item = nil
+      index = cart.find_index(grocery_item)
+      binding.pry
+      cart.pop index 
     end 
   end 
 end
