@@ -2,7 +2,10 @@ require_relative './part_1_solution.rb'
 require 'pry'
 
 def apply_coupons(cart, coupons)
-  binding.pry
+  cart.each do |grocery_item|
+    coupons.each do |coupon|
+      if coupon[:item] == grocery_item[:item]
+        
   
   
 end
