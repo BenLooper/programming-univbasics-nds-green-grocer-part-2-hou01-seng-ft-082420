@@ -6,12 +6,12 @@ def apply_coupons(cart, coupons)
     coupons.each do |coupon|
       if coupon[:item] == grocery_item[:item]
         until grocery_item[:count] < coupon[:num]
-        cart.append({item: grocery_item[:item] + " W/COUPON", 
-                     price: coupon[:cost] / coupon[:num],
-                     clearance: true,
-                     count: coupon[:num]
-                    })
-        grocery_item[:count] = grocery_item[:count] - coupon[:num]
+          cart.append({item: grocery_item[:item] + " W/COUPON", 
+                       price: coupon[:cost] / coupon[:num],
+                       clearance: true,
+                       count: coupon[:num]
+                      })
+          grocery_item[:count] = grocery_item[:count] - coupon[:num]
       end 
     end 
   end 
