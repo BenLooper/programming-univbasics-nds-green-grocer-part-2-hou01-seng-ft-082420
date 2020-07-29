@@ -19,6 +19,7 @@ def apply_coupons(cart, coupons)
       grocery_item = nil
     end 
   end 
+  binding.pry
 end
 
 def apply_clearance(cart)
