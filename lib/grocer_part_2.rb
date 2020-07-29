@@ -19,8 +19,6 @@ def apply_coupons(cart, coupons)
       cart.pop grocery_item
     end 
   end 
-  binding.pry
-  
 end
 
 def apply_clearance(cart)
